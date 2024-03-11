@@ -7,6 +7,7 @@ import AboutPg from './pages/AboutPg';
 import ProjectPg from './pages/ProjectPg';
 import ContactPg from './pages/ContactPg';
 import ExperiencePg from './pages/ExperiencePg';
+import RightMenu from './component/RightMenu';
 
 function App() {
   let [isDarkMode, setIsDarkMode] = useState(darkModeLocalStorage.get());
@@ -43,6 +44,7 @@ function App() {
   return (
     <div className="App scroller">
       <MyHeader toggleScreenMode={toggleScreenMode} toggleLanguageMode={toggleLanguageMode} isVietnamese={isVietnamese} />
+      <RightMenu isVietnamese={isVietnamese} />
       <BannerPg isVietnamese={isVietnamese} />
       <AboutPg isVietnamese={isVietnamese} />
       <ExperiencePg />

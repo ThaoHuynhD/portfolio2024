@@ -5,18 +5,7 @@ import { Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
 export default function ProjectPg({ isVietnamese }) {
-  document.addEventListener("DOMContentLoaded", function () {
-    const video = document.querySelector("video");
 
-    video.addEventListener("mouseover", function () {
-      this.play();
-    });
-
-    video.addEventListener("mouseout", function () {
-      this.pause();
-      this.currentTime = 0;
-    });
-  });
   return (
     <section id='project'>
       <div className="container">
