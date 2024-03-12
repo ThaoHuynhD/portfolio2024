@@ -9,11 +9,17 @@ export default function ProjectPg({ isVietnamese }) {
   return (
     <section id='project'>
       <div className="container">
-        <div class="title">
-          <h1>Previous Projects</h1>
-          <p>I have built various different projects to fit different aspects of the client's business. If you want to see more examples of my work than the ones showcased in this site, please contact me!</p>
-          <button>See Projects</button>
-        </div>
+        {isVietnamese ? (<div className="title">
+          <h1>Dự án của chúng tôi</h1>
+          <p>Tôi và đồng đội đã xây dựng nhiều dự án khác nhau để phù hợp với các nhu cầu khác nhau của khách hàng. Nếu bạn muốn xem thêm các ví dụ về công việc của tôi ngoài những dự án được giới thiệu trên trang web này, vui lòng liên hệ với tôi!</p>
+          <button>Xem Dự Án</button>
+        </div>) : (
+          <div className="title">
+            <h1>Previous Projects</h1>
+            <p>I have built various different projects to fit different aspects of the client's business. If you want to see more examples of my work than the ones showcased in this site, please contact me!</p>
+            <button>See Projects</button>
+          </div>
+        )}
         <Swiper
           pagination={{
             clickable: true,
@@ -51,10 +57,10 @@ export default function ProjectPg({ isVietnamese }) {
                     </a>
                   </p>
                 </div>
-                <div class="col-span-3 ml-10">
+                <div className="col-span-3 ml-10">
                   <div className="picture-wrapper"><img className={item.img === '' ? 'hidden' : 'w-full'} src={item.img} alt={item.name} /></div>
                   <div className="video-wrapper">
-                    <video className={item.video === '' ? 'hidden' : 'w-full'} controls autoplay onmouseover="this.play()" onmouseout="this.pause();this.currentTime=0;">
+                    <video className={item.video === '' ? 'hidden' : 'w-full'} controls>
                       <source src={item.video} type="video/mp4" />
                     </video>
                   </div>
@@ -64,6 +70,6 @@ export default function ProjectPg({ isVietnamese }) {
           })}
         </Swiper>
       </div>
-    </section>
+    </section >
   )
 }

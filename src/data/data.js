@@ -1,5 +1,5 @@
 export const headerTitle = [
-    { title: 'Home', vntitle: 'Trang Chủ', link: '#' },
+    { title: 'Home', vntitle: 'Trang Chủ', link: '#banner' },
     { title: 'Intro', vntitle: 'Giới Thiệu', link: '#intro' },
     { title: 'Experiences', vntitle: 'Kinh Nghiệm', link: '#experiences' },
     { title: 'Projects', vntitle: 'Dự Án', link: '#project' },

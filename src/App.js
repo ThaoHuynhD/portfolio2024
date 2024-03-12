@@ -10,6 +10,7 @@ import ExperiencePg from './pages/ExperiencePg';
 import RightMenu from './component/RightMenu';
 
 function App() {
+
   let [isDarkMode, setIsDarkMode] = useState(darkModeLocalStorage.get());
   let [isVietnamese, setIsVietnamese] = useState(vietnameseModeLocalStorage.get());
 
@@ -47,7 +48,7 @@ function App() {
       <RightMenu isVietnamese={isVietnamese} />
       <BannerPg isVietnamese={isVietnamese} />
       <AboutPg isVietnamese={isVietnamese} />
-      <ExperiencePg />
+      <ExperiencePg isVietnamese={isVietnamese} />
       <ProjectPg isVietnamese={isVietnamese} />
       <ContactPg isVietnamese={isVietnamese} />
     </div>
