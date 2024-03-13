@@ -1,74 +1,5 @@
 @import './variables.scss';
 
-body {
-  .logo-light {
-    max-width: 0;
-  }
-
-  .logo-dark {
-    max-width: 150px;
-  }
-
-  .screen-light {
-    max-width: 0;
-  }
-
-  .screen-dark {
-    max-width: 30px;
-  }
-}
-
-body.dark-mode {
-  background-color: $background-dark;
-  color: $text-normal-dark;
-
-  a {
-    color: $text-normal-dark;
-  }
-
-  .logo-light {
-    max-width: 150px;
-  }
-
-  .logo-dark {
-    max-width: 0;
-  }
-
-  .screen-light {
-    max-width: 30px;
-  }
-
-  .screen-dark {
-    max-width: 0;
-  }
-}
-
-body {
-  .english-mode {
-    max-height: 0;
-  }
-
-  .vietnamese-mode {
-    max-height: 100%;
-  }
-}
-
-body.vietnamese-mode {
-  .english-mode {
-    max-height: 100%;
-  }
-
-  .vietnamese-mode {
-    max-height: 0;
-  }
-}
-
-.screen-mode-toggle {
-  background: transparent;
-  cursor: pointer;
-  height: 48px;
-}
-
 .banner-img:hover {
   transform: scale(2) translateY(20%);
 }
@@ -94,42 +25,6 @@ body a.menu-item {
     &::after {
       background-color: $color-yellow-4;
       box-shadow: $box-shadow-2;
-    }
-  }
-}
-
-#contact {
-  .container {
-    width: 60%;
-  }
-
-  .grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-  }
-
-  li {
-    display: flex;
-    align-items: center;
-    justify-content: left;
-    padding: 10px 0;
-
-    .orangeBtn {
-      width: 40px;
-      height: 40px;
-      padding: 0;
-      margin-right: 20px;
-    }
-
-    p {
-      margin: 5px;
-      color: gray;
-    }
-
-    span {
-      font-weight: bold;
-      font-size: 28px;
     }
   }
 }

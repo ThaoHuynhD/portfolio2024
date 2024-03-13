@@ -1,7 +1,7 @@
 export const headerTitle = [
     { title: 'Home', vntitle: 'Trang Chủ', link: '#banner' },
     { title: 'Intro', vntitle: 'Giới Thiệu', link: '#intro' },
-    { title: 'Experiences', vntitle: 'Kinh Nghiệm', link: '#experiences' },
+    { title: 'Skills', vntitle: 'Kỹ Năng', link: '#skills' },
     { title: 'Projects', vntitle: 'Dự Án', link: '#project' },
     { title: 'Contact', vntitle: 'Liên Hệ', link: '#contact' },
 ];

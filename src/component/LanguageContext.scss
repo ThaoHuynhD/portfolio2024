@@ -1,0 +1,19 @@
+@import '../variables.scss';
+
+.english-mode {
+    max-width: 0;
+}
+
+.vietnamese-mode {
+    max-width: 64px;
+}
+
+.vietnamese {
+    .english-mode {
+        max-width: 64px;
+    }
+
+    .vietnamese-mode {
+        max-width: 0;
+    }
+}

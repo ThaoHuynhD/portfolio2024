@@ -1,7 +1,9 @@
 import React from 'react'
 import { aboutDetail, aboutIntro } from '../data/data'
+import { useLanguage } from '../component/LanguageContext';
 
-export default function AboutPg({ isVietnamese }) {
+export default function AboutPg() {
+  const { isVietnamese } = useLanguage();
   return (
     <section id='intro'>
       <div className="container">

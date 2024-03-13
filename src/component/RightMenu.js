@@ -1,13 +1,15 @@
 import React, { useState } from 'react'
 import { headerTitle } from '../data/data'
+import { useLanguage } from './LanguageContext';
 
-export default function RightMenu({ isVietnamese }) {
+export default function RightMenu() {
+    const { isVietnamese } = useLanguage();
     const [activeTitle, setActiveTitle] = useState(headerTitle[0].link);
     const handleTitleClick = (link) => {
         setActiveTitle(link);
     };
     return (
-        <div>
+        <div className='menu'>
             <ul className='fixed right-40 top-1/3 flex flex-col' id='mainNav'>
                 {headerTitle.map((item, index) => {
                     const isActive = item.link === activeTitle;

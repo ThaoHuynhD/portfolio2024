@@ -1,9 +1,11 @@
 import React from 'react'
 import { tools } from '../data/data'
+import { useLanguage } from '../component/LanguageContext';
 
-export default function ExperiencePg({ isVietnamese }) {
+export default function ExperiencePg() {
+  const { isVietnamese } = useLanguage();
   return (
-    <section id='experiences'>
+    <section id='skills'>
       <div className="container">
         {isVietnamese ? (
           <div className="title mb-10">

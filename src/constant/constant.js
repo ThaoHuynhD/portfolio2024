@@ -1,0 +1,1 @@
+export const SET_ACTIVE_TITLE = 'SET_ACTIVE_TITLE';
