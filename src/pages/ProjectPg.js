@@ -1,7 +1,7 @@
 import React from 'react'
 import { projectDetail } from '../data/data'
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay, Navigation, Pagination } from 'swiper/modules';
+import { Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import { useLanguage } from '../component/LanguageContext';
@@ -23,15 +23,12 @@ export default function ProjectPg() {
         )}
         <Swiper
           pagination={{
-            type: 'progressbar',
-
+            clickable: true,
           }}
-          autoplay={{
-            delay: 4000,
-            disableOnInteraction: false,
-          }}
-          navigation={true}
-          modules={[Autoplay, Pagination, Navigation]}
+          slidesPerView={1}
+          autoplay
+          scrollbar={{ draggable: true }}
+          modules={[Pagination]}
           className="mySwiper"
         >
           {projectDetail.map((item, index) => {

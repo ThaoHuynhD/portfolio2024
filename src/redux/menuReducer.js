@@ -10,7 +10,7 @@ export default (state = initialState, { type, payload }) => {
         case SET_ACTIVE_TITLE:
             return {
                 ...state,
-                activeTitle: payload.link
+                activeTitle: payload
             };
         default:
             return state;

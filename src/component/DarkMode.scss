@@ -1,19 +1,21 @@
 @import '../variables.scss';
 
-.logo-light {
-    max-width: 0;
-}
+body {
+    .logo-light {
+        max-width: 0;
+    }
 
-.logo-dark {
-    max-width: 150px;
-}
+    .logo-dark {
+        max-width: 150px;
+    }
 
-.screen-light {
-    max-width: 0;
-}
+    .screen-light {
+        max-width: 0;
+    }
 
-.screen-dark {
-    max-width: 30px;
+    .screen-dark {
+        max-width: 30px;
+    }
 }
 
 body.dark-mode {

@@ -32,10 +32,6 @@ img {
     align-items: center;
 }
 
-#menu {
-    z-index: 10000;
-}
-
 .title {
     text-align: center;
     padding: 50px;
@@ -74,6 +70,18 @@ section {
     padding: 80px 0;
     height: 100vh;
     width: 100vw;
+}
+
+.scroller {
+    height: 100vh;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+    transition: all 0.5s ease-in;
+}
+
+.scroller section {
+    scroll-snap-align: start;
 }
 
 .picture-wrapper {
