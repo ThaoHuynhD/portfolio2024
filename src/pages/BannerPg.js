@@ -5,7 +5,7 @@ import { useLanguage } from '../component/LanguageContext';
 export default function BannerPg() {
   const { isVietnamese } = useLanguage();
   return (
-    <section id='banner' className='w-screen pt-40 h-screen'>
+    <section id='banner'>
       <div className="container revealUp">
         <div className="grid grid-cols-2">
           <div className="cool">

@@ -38,18 +38,18 @@ export default function ProjectPg() {
                   <h3 className='text-5xl text-amber-400 font-bold py-3' key={index}>{item.name} </h3>
                   <p className='py-6 align-sub min-h-56'>{isVietnamese ? item.vnintro : item.intro}</p>
                   <p className='flex gap-3'>
-                    {item.techs.map((item, index) => <span key={index} className='p-2 bg-slate-500 rounded-xl flex'>
+                    {item.techs.map((item, index) => <span key={index} className='tech-btn p-2 bg-slate-500 rounded-xl flex'>
                       {item}</span>)}
                   </p>
                   <p className="mt-5">
-                    <a className={item.linkweb === '' ? 'hidden' : 'w-48 py-2 px-4 border border-gray-400 rounded-2xl bg-black mr-5'}
+                    <a className={item.linkweb === '' ? 'hidden' : 'tech-btn w-48 py-2 px-4 border border-gray-400 rounded-2xl bg-black mr-5'}
                       href={item.linkweb}>
                       <span>
                         <i className="fa-solid fa-link pr-3"></i>
                         {isVietnamese ? 'Xem website' : 'View Website'}
                       </span>
                     </a>
-                    <a className={item.linksource === '' ? 'hidden' : 'w-48 py-2 px-4 border border-gray-400 rounded-2xl bg-black'}
+                    <a className={item.linksource === '' ? 'hidden' : 'tech-btn w-48 py-2 px-4 border border-gray-400 rounded-2xl bg-black'}
                       href={item.linksource}>
                       <span>
                         <i className="fa-brands fa-github pr-3"></i>

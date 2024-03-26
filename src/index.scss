@@ -32,6 +32,7 @@ img {
     align-items: center;
 }
 
+
 .title {
     text-align: center;
     padding: 50px;
@@ -40,20 +41,23 @@ img {
         font-size: 100px;
         font-weight: bold;
         margin: 20px 0;
-        transition: $transition-default;
-
-        background-image: linear-gradient(-225deg,
-                #fff800 30%,
-                #fc2323 70%);
+        color: #b33304;
+        background-image: linear-gradient(-225deg, #b33304 0);
         background-size: auto auto;
         background-clip: border-box;
         background-size: 200% auto;
         background-clip: text;
         -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
         display: inline-block;
+        transition: $transition-default;
 
         &:hover {
+            -webkit-text-fill-color: transparent;
+
+            background-image: linear-gradient(-500deg,
+                    #b33304 30%,
+                    #ffc400 70%);
+
             animation: textclip 2s linear infinite;
         }
     }
@@ -62,6 +66,25 @@ img {
         font-size: 25px;
     }
 }
+// #project > div > div.title > h1
+// .dark-mode {
+//     section{
+//         .title {
+//             .h1 {
+//                 background-image: linear-gradient(-225deg, #ffc400 0);
+//                 color: #ffc400;
+    
+//                 &:hover {
+//                     background-image: linear-gradient(-500deg,
+//                             #b33304 70%,
+//                             #ffc400 00%,
+//                         );
+//                 }
+//             }
+//         }
+//     }
+
+// }
 
 section {
     scroll-snap-align: start;
@@ -72,17 +95,13 @@ section {
     width: 100vw;
 }
 
-.scroller {
-    height: 100vh;
-    overflow-y: scroll;
-    scroll-snap-type: y mandatory;
-    scroll-behavior: smooth;
-    transition: all 0.5s ease-in;
-}
-
-.scroller section {
-    scroll-snap-align: start;
-}
+// .scroller {
+//     height: 100vh;
+//     overflow-y: scroll;
+//     scroll-snap-type: y mandatory;
+//     scroll-behavior: smooth;
+//     transition: all 0.5s ease-in;
+// }
 
 .picture-wrapper {
     position: relative;

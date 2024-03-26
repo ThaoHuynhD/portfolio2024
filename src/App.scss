@@ -7,6 +7,7 @@
 body a.menu-item {
   display: flex;
   padding: 0;
+  font-weight: bold;
 
   &::after {
     margin-left: auto;
@@ -20,11 +21,30 @@ body a.menu-item {
 
   &:hover,
   &.active {
+    color: $color-orange-2;
+
+    &::after {
+      background-color: $color-yellow-5;
+      box-shadow: $box-shadow-3;
+    }
+  }
+}
+
+body.dark-mode a.menu-item {
+
+  &:hover,
+  &.active {
     color: $color-yellow-4;
 
     &::after {
       background-color: $color-yellow-4;
       box-shadow: $box-shadow-2;
     }
+  }
+}
+
+body #project {
+  .tech-btn {
+    color: white;
   }
 }
