@@ -1,19 +1,15 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import { headerTitle } from '../data/data'
 import { useLanguage } from './LanguageContext';
 
 export default function RightMenu() {
     const { isVietnamese } = useLanguage();
     const [activeTitle, setActiveTitle] = useState(headerTitle[0].link);
-
-    let sections;
-    useEffect(() => {
-        sections = document.querySelectorAll('section');
-    }, []);
+    let index = headerTitle.findIndex(item => item.link === activeTitle);
 
     const handleTitleClick = (link) => {
-        setActiveTitle(link);
         scrollToSection(link);
+        setActiveTitle(link);
     };
 
     function scrollToSection(sectionId) {
@@ -24,6 +20,42 @@ export default function RightMenu() {
                 behavior: 'smooth'
             });
         }
+    }
+
+    var container = document.querySelector('#myBody');
+
+    container.addEventListener('wheel', debounce(onScroll, 100));
+    container.addEventListener('DOMMouseScroll', debounce(onScroll, 100));
+
+    function debounce(func, delay) {
+        let timeoutId;
+        return function () {
+            const context = this;
+            const args = arguments;
+            clearTimeout(timeoutId);
+            timeoutId = setTimeout(() => {
+                func.apply(context, args);
+            }, delay);
+        };
+    }
+
+    function onScroll(e) {
+        e = e || window.event;
+
+        var delta = e.detail ? -e.detail : e.wheelDelta;
+
+        if (delta > 0) {
+            if (index > 0) {
+                index--;
+                handleTitleClick(headerTitle[index].link)
+            }
+        } else {
+            if (index < headerTitle.length - 1) {
+                index++;
+                handleTitleClick(headerTitle[index].link)
+            }
+        }
+        e.preventDefault ? e.preventDefault() : (e.returnValue = false);
     }
 
     return (
@@ -42,8 +74,7 @@ export default function RightMenu() {
                 </ul>
                 <div className='-rotate-90 mt-40'>
                     <a className='p-2 w-36 cursor-pointer hover:text-amber-300'
-                        // href='#banner'
-                        onClick={() => handleTitleClick('#banner')}
+                        onClick={() => handleTitleClick(headerTitle[0].link)}
                     >
                         {isVietnamese ? 'Về đầu trang' : 'Back to top'}
                         <i className="fa-solid fa-angles-right ml-2"></i></a>
