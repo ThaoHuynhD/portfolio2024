@@ -10,7 +10,7 @@ import { LanguageProvider } from './component/LanguageContext';
 
 function App() {
   return (
-    <div className="App scroller">
+    <div className="App">
       <LanguageProvider>
         <MyHeader />
         <RightMenu />
