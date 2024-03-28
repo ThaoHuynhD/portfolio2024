@@ -24,8 +24,8 @@ export default function RightMenu() {
         };
     }
 
+    let index;
     function onScroll(e) {
-        let index = headerTitle.findIndex(item => item.link === activeTitle);
         e = e || window.event;
 
         var delta = e.detail ? -e.detail : e.wheelDelta;
@@ -39,7 +39,7 @@ export default function RightMenu() {
                     section.classList.add('animate__fadeInDown');
                 })
             }
-        } else if (index < headerTitle.length - 1) {
+        } else if (index < (headerTitle.length - 1)) {
             index++;
             setActiveTitle(headerTitle[index].link);
             sections.forEach((section) => {
@@ -52,6 +52,7 @@ export default function RightMenu() {
     }
 
     function scrollToSection(sectionId) {
+        index = headerTitle.findIndex(item => item.link === sectionId);
         const section = document.querySelector(sectionId);
         section.classList.add('active');
         if (section) {
@@ -78,7 +79,7 @@ export default function RightMenu() {
 
     return (
         <div className='menu'>
-            <div className='fixed right-20 top-1/3 flex flex-col'>
+            <div className='fixed right-20 top-1/3 flex flex-col z-2000'>
                 <ul id='mainNav'>
                     {headerTitle.map((item, index) => {
                         const isActive = item.link === activeTitle;

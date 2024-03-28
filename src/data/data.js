@@ -10,9 +10,9 @@ export const aboutIntro = {
     vndata: 'Tôi là một nhà phát triển web chuyên nghiệp và có kinh nghiệm trong quản trị cơ sở dữ liệu cũng như thiết kế website. Tôi có khả năng phân tích và sáng tạo mạnh mẽ, có thể hoàn thành công việc một cách xuất sắc cả khi làm việc độc lập hoặc làm việc cùng đồng đội. Tôi là một người tỉ mỉ và thích làm việc có hệ thống.'
 }
 export const aboutDetail = [
-    { title: 'Address', vntitle: 'Địa chỉ', data: 'District 10, Ho Chi Minh City.', vndata: 'Quận 10, Thành phố Hồ Chí Minh.' },
-    { title: 'Phone Number', vntitle: 'Số điện thoại', data: '(+84) 967 100 751', vndata: '0967 100 751' },
-    { title: 'Email', vntitle: 'Địa chỉ email', data: 'thaohuynh34.678@gmail.com', vndata: 'thaohuynh34.678@gmail.com' }
+    { icon: 'fa-solid fa-location-dot', title: 'Address', vntitle: 'Địa chỉ', data: 'District 10, Ho Chi Minh City.', vndata: 'Quận 10, Thành phố Hồ Chí Minh.' },
+    { icon: 'fa-solid fa-phone', title: 'Phone Number', vntitle: 'Số điện thoại', data: '(+84) 967 100 751', vndata: '0967 100 751' },
+    { icon: 'fa-solid fa-envelope', title: 'Email', vntitle: 'Địa chỉ email', data: 'thaohuynh34.678@gmail.com', vndata: 'thaohuynh34.678@gmail.com' }
 ]
 export const projectDetail = [
     {
@@ -31,7 +31,7 @@ export const projectDetail = [
         vnintro: 'Để tạo ra một nền tảng giúp người dùng dễ dàng truy vấn đến các khách sạn phù hợp nhu cầu, chúng tôi đã xây dựng các logic hoạt động của trang web AirBnb giúp đặt phòng khách sạn theo nguyên tắc RESTful API. Tôi và đồng đội đã thiết lập logic của các hoạt động có thể xảy ra khi người dùng và quản trị viên cần truy xuất hay quản lý dữ liệu hiển thị trên trang web',
         img: './img/webairbnb.png',
         video: '',
-        techs: ['TypeScripts', 'Docker', 'NestJS', 'MySQL', 'Prisma', 'JWT', 'Swagger'],
+        techs: ['TypeScripts', 'Docker', 'NestJS', 'MySQL', 'Prisma', 'Swagger'],
         linkweb: '',
         linksource: 'https://github.com/vohaiphuc/cybersoft-be-airbnb.git',
     },
@@ -93,5 +93,4 @@ export const tools = [
     { link: './img/icon/icons8-postman.png', title: 'postman' },
     { link: './img/icon/icons8-jwt.svg', title: 'jwt' },
     { link: './img/icon/icons8-swagger.svg', title: 'swagger' },
-
 ]

@@ -18,6 +18,9 @@ module.exports = {
     height: {
       400: '400px',
       800: '800px'
+    },
+    zIndex: {
+      2000: '2000'
     }
   },
   plugins: [],
