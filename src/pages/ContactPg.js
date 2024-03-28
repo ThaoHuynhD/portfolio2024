@@ -7,7 +7,7 @@ export default function ContactPg() {
   const { isVietnamese } = useLanguage();
   return (
     <section id='contact'>
-      <div class="section-container">
+      <div className="section-container">
         <div className="container">
           <div className="lg:grid lg:grid-cols-2">
             <div>

@@ -6,7 +6,7 @@ export default function ExperiencePg() {
   const { isVietnamese } = useLanguage();
   return (
     <section id='skills'>
-      <div class="section-container">
+      <div className="section-container">
         <div className="container">
           {isVietnamese ? (
             <div className="title lg:mb-10">

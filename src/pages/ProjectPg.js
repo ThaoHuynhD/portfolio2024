@@ -9,7 +9,7 @@ export default function ProjectPg() {
   const { isVietnamese } = useLanguage();
   return (
     <section id='project'>
-      <div class="section-container">
+      <div className="section-container">
         <div className="container">
           {isVietnamese ? (<div className="title">
             <h1 className='animate-charcter'>Dự án của chúng tôi</h1>

@@ -5,6 +5,10 @@ export const headerTitle = [
     { title: 'Projects', vntitle: 'Dự Án', link: '#project' },
     { title: 'Contact', vntitle: 'Liên Hệ', link: '#contact' },
 ];
+export const bannerImg = {
+    light: 'https://i.pinimg.com/originals/05/cd/9a/05cd9a0bb4c72e5ba98ece031987955d.gif',
+    dark: 'https://i.pinimg.com/originals/6d/80/2f/6d802ffd14b32795b4deb0b886a7815a.gif'
+}
 export const aboutIntro = {
     data: 'I am a qualified and professional web developer with several of experience in database administration and website design. Strong analytical and creative skills who can done job well even personal or team-work. Team player with an eye for detail and organized.',
     vndata: 'Tôi là một nhà phát triển web chuyên nghiệp và có kinh nghiệm trong quản trị cơ sở dữ liệu cũng như thiết kế website. Tôi có khả năng phân tích và sáng tạo mạnh mẽ, có thể hoàn thành công việc một cách xuất sắc cả khi làm việc độc lập hoặc làm việc cùng đồng đội. Tôi là một người tỉ mỉ và thích làm việc có hệ thống.'
