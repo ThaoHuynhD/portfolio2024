@@ -79,7 +79,7 @@ export default function RightMenu() {
 
     return (
         <div className='menu'>
-            <div className='fixed right-20 top-1/3 flex flex-col z-2000'>
+            <div className='fixed right-5 top-1/3 flex flex-col z-2000'>
                 <ul id='mainNav'>
                     {headerTitle.map((item, index) => {
                         const isActive = item.link === activeTitle;

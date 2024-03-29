@@ -36,7 +36,7 @@ img {
 
 .title {
     text-align: center;
-    padding: 50px;
+    padding-bottom: 50px;
 
     h1 {
         font-weight: bold;
@@ -92,6 +92,9 @@ section.active {
 .picture-wrapper {
     position: relative;
     overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .orangeBtn {
@@ -117,4 +120,9 @@ section.active {
     to {
         background-position: 200% center;
     }
+}
+
+.animate__animated.animate__slideInRight,
+.animate__animated.animate__slideInUp {
+    --animate-duration: 2s;
 }

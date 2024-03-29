@@ -12,7 +12,7 @@ export default function AboutPg() {
             <div className="picture-wrapper w-4/5 lg:w-auto m-auto rounded-xl">
               <img className='banner-img' src='./img/banner.jpg' alt='' />
             </div>
-            <div className="mx-5 lg:m-auto content">
+            <div className='mx-5 lg:m-auto content  animate__animated animate__fadeInRightBig  animate__delay-0.5s'>
               <h1 className='text-center lg:text-left text-5xl lg:text-7xl'>{isVietnamese ? 'VỀ' : 'ABOUT'}
                 <span className='text-5xl lg:text-7xl text-amber-500 font-extrabold'> {isVietnamese ? 'TÔI' : 'ME'}</span></h1>
               <p className='my-10'>{isVietnamese ? aboutIntro.vndata : aboutIntro.data}</p>

@@ -16,8 +16,8 @@ export default function ContactPg() {
             </div>
             <ul>
               {aboutDetail.map((item, index) => {
-                return <li key={index}>
-                  <div className=' min-w-9 orangeBtn flex-center'>
+                return <li key={index} className='animate__animated animate__slideInRight'>
+                  <div className='min-w-8 orangeBtn flex-center'>
                     <i className={item.icon}></i>
                   </div>
                   <div className="info">

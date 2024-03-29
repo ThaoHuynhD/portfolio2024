@@ -1,7 +1,7 @@
 import React from 'react'
 import { projectDetail } from '../data/data'
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Pagination } from 'swiper/modules';
+import { Navigation, Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import { useLanguage } from '../component/LanguageContext';
@@ -12,29 +12,30 @@ export default function ProjectPg() {
       <div className="section-container">
         <div className="container">
           {isVietnamese ? (<div className="title">
-            <h1 className='animate-charcter'>Dự án của chúng tôi</h1>
+            <h1 className='text-4xl lg:text-7xl animate-charcter'>Dự án của chúng tôi</h1>
             <p>Tôi và đồng đội đã xây dựng nhiều dự án khác nhau để phù hợp với các nhu cầu khác nhau của khách hàng. Nếu bạn muốn xem thêm các ví dụ về công việc của tôi ngoài những dự án được giới thiệu trên trang web này, vui lòng liên hệ với tôi!</p>
             <button>Xem Dự Án</button>
           </div>) : (
             <div className="title">
-              <h1 className='animate-charcter'>Previous Projects</h1>
+              <h1 className='text-4xl lg:text-7xl animate-charcter'>Previous Projects</h1>
               <p>I have built various different projects to fit different aspects of the client's business. If you want to see more examples of my work than the ones showcased in this site, please contact me!</p>
               <button>See Projects</button>
             </div>
           )}
           <Swiper
+            navigation={true}
             pagination={{
               clickable: true,
             }}
             slidesPerView={1}
-            autoplay
+            // autoplay
             scrollbar={{ draggable: true }}
-            modules={[Pagination]}
+            modules={[Pagination, Navigation]}
             className="mySwiper"
           >
             {projectDetail.map((item, index) => {
               return <SwiperSlide key={index}>
-                <div className='grid grid-cols-5 h-800' >
+                <div className='grid grid-cols-5 h-700' >
                   <div className="col-span-2 item-content">
                     <h3 className='text-5xl text-amber-400 font-bold py-3' key={index}>{item.name} </h3>
                     <p className='py-6 align-sub min-h-56'>{isVietnamese ? item.vnintro : item.intro}</p>
@@ -60,9 +61,11 @@ export default function ProjectPg() {
                     </p>
                   </div>
                   <div className="col-span-3 ml-10">
-                    <div className="picture-wrapper"><img className={item.img === '' ? 'hidden' : 'w-full'} src={item.img} alt={item.name} /></div>
+                    <div className="picture-wrapper overflow-hidden m-auto">
+                      <img className={item.img === '' ? 'hidden' : 'w-full'} src={item.img} alt={item.name} />
+                    </div>
                     <div className="video-wrapper">
-                      <video className={item.video === '' ? 'hidden' : 'w-full'} controls>
+                      <video className={item.video === '' ? 'hidden' : 'w-full'} controls autoPlay muted>
                         <source src={item.video} type="video/mp4" />
                       </video>
                     </div>
