@@ -12,19 +12,21 @@ export default function AboutPg() {
             <div className="picture-wrapper w-4/5 lg:w-auto m-auto rounded-xl">
               <img className='banner-img' src='./img/banner.jpg' alt='' />
             </div>
-            <div className='mx-5 lg:m-auto content  animate__animated animate__fadeInRightBig  animate__delay-0.5s'>
-              <h1 className='text-center lg:text-left text-5xl lg:text-7xl'>{isVietnamese ? 'VỀ' : 'ABOUT'}
-                <span className='text-5xl lg:text-7xl text-amber-500 font-extrabold'> {isVietnamese ? 'TÔI' : 'ME'}</span></h1>
-              <p className='my-10'>{isVietnamese ? aboutIntro.vndata : aboutIntro.data}</p>
+            <div className='mx-5 lg:m-auto content '>
+              <h1 className='text-center lg:text-left text-5xl lg:text-7xl
+              animate__animated animate__fadeInRightBig
+              '>{isVietnamese ? 'VỀ' : 'ABOUT'}
+                <span className='text-5xl lg:text-7xl text-amber-500 font-extrabold animate__animated animate__fadeInRightBig'> {isVietnamese ? 'TÔI' : 'ME'}</span></h1>
+              <p className='my-10 animate__animated animate__fadeInRight animate__delay-1s'>{isVietnamese ? aboutIntro.vndata : aboutIntro.data}</p>
               {aboutDetail.map((item, index) => {
                 return <div key={index} className="max-w-lg">
-                  <ul className='grid grid-cols-3 lg:grid-cols-2 gap-5'>
+                  <ul className='grid grid-cols-3 lg:grid-cols-2 gap-5 animate__animated animate__fadeInRight animate__delay-1s'>
                     <li>{isVietnamese ? item.vntitle : item.title}</li>
                     <li className='col-span-2 lg:col-auto'>{isVietnamese ? item.vndata : item.data}</li>
                   </ul>
                 </div>
               })}
-              <div className="text-center"><button className='orangeBtn mt-10' onClick={() => { }} >{isVietnamese ? 'TẢI CV CỦA TÔI' : 'DOWNLOAD MY CV'}</button></div>
+              <div className="text-center"><button className='orangeBtn mt-10 animate__animated animate__bounceIn animate__delay-2s' onClick={() => { }} >{isVietnamese ? 'TẢI CV CỦA TÔI' : 'DOWNLOAD MY CV'}</button></div>
             </div>
           </div>
         </div>

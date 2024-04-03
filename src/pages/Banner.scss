@@ -1,12 +1,11 @@
 @import '../variables.scss';
 
 .typewriter {
-    overflow: hidden;
     border-right: .15em solid orange;
     white-space: nowrap;
+    overflow: hidden;
     margin: 0;
     padding-top: 20px;
-    // width: 100%;
     display: inline-block;
     letter-spacing: 0.01em;
     transition: $transition-default;
@@ -15,13 +14,21 @@
         blink-caret 0.75s step-end infinite;
 }
 
+.dark-mode #banner-img {
+    box-shadow: none;
+}
+
+#banner-img {
+    box-shadow: $box-shadow-4;
+}
+
 @keyframes typing {
     from {
         width: 0
     }
 
     to {
-        width: 100%
+        width: 78%
     }
 }
 

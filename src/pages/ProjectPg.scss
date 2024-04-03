@@ -1,0 +1,77 @@
+@import '../variables.scss';
+
+.mySwiper .swiper-slide {
+    width: 25%;
+    height: 100%;
+    opacity: 0.4;
+}
+
+.mySwiper .swiper-slide-thumb-active {
+    opacity: 1;
+}
+
+.left-btn {
+    position: relative;
+    left: -60px;
+}
+
+.right-btn {
+    position: relative;
+    right: -60px;
+}
+
+.dark-mode .orangeOutlineBtn {
+    background: $background-dark;
+}
+
+.orangeOutlineBtn {
+    --border-width: 3px;
+
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: $background-light;
+    color: $color-orange-1;
+    font-weight: bold;
+    border-radius: var(--border-width);
+    cursor: pointer;
+    transition: $transition-default;
+
+    &::after {
+        position: absolute;
+        content: "";
+        top: calc(-1 * var(--border-width));
+        left: calc(-1 * var(--border-width));
+        z-index: -1;
+        width: calc(100% + var(--border-width) * 2);
+        height: calc(100% + var(--border-width) * 2);
+        background: linear-gradient(60deg,
+                hsl(44, 85%, 66),
+                hsl(44, 100%, 50%),
+                hsl(269, 100%, 46%),
+                hsl(314, 100%, 50%),
+                hsl(359, 100%, 44%),
+                hsl(44, 85%, 66),
+                hsl(44, 100%, 50%));
+        background-size: 300% 300%;
+        background-position: 0 50%;
+        border-radius: calc(2 * var(--border-width));
+        animation: moveGradient 4s alternate infinite;
+        animation-delay: 6s;
+        opacity: 0.2;
+        transition: $transition-default;
+    }
+
+    &:hover {
+        &::after {
+            opacity: 1;
+        }
+    }
+}
+
+@keyframes moveGradient {
+    50% {
+        background-position: 100% 50%;
+    }
+}

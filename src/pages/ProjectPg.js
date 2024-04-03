@@ -1,12 +1,17 @@
-import React from 'react'
+import React, { useRef, useState } from 'react'
 import { projectDetail } from '../data/data'
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination } from 'swiper/modules';
+import { FreeMode, Navigation, Pagination, Thumbs } from 'swiper/modules';
+import './ProjectPg.scss';
 import 'swiper/css';
 import 'swiper/css/pagination';
+import 'swiper/css/navigation';
 import { useLanguage } from '../component/LanguageContext';
 export default function ProjectPg() {
   const { isVietnamese } = useLanguage();
+  const [thumbsSwiper, setThumbsSwiper] = useState(null);
+  const navigationNextRef = useRef(null);
+  const navigationPrevRef = useRef(null);
   return (
     <section id='project'>
       <div className="section-container">
@@ -23,19 +28,19 @@ export default function ProjectPg() {
             </div>
           )}
           <Swiper
-            navigation={true}
-            pagination={{
-              clickable: true,
+            loop={true}
+            spaceBetween={10}
+            navigation={{
+              prevEl: navigationPrevRef.current,
+              nextEl: navigationNextRef.current,
             }}
-            slidesPerView={1}
-            // autoplay
-            scrollbar={{ draggable: true }}
-            modules={[Pagination, Navigation]}
-            className="mySwiper"
+            thumbs={{ swiper: thumbsSwiper }}
+            modules={[FreeMode, Navigation, Thumbs]}
+            className="mySwiper2"
           >
             {projectDetail.map((item, index) => {
               return <SwiperSlide key={index}>
-                <div className='grid grid-cols-5 h-700' >
+                <div className='grid grid-cols-5 h-550' >
                   <div className="col-span-2 item-content">
                     <h3 className='text-5xl text-amber-400 font-bold py-3' key={index}>{item.name} </h3>
                     <p className='py-6 align-sub min-h-56'>{isVietnamese ? item.vnintro : item.intro}</p>
@@ -61,11 +66,42 @@ export default function ProjectPg() {
                     </p>
                   </div>
                   <div className="col-span-3 ml-10">
-                    <div className="picture-wrapper overflow-hidden m-auto">
+                    <div className={item.img === '' ? 'hidden' : 'picture-wrapper m-auto h-500'}>
                       <img className={item.img === '' ? 'hidden' : 'w-full'} src={item.img} alt={item.name} />
                     </div>
                     <div className="video-wrapper">
                       <video className={item.video === '' ? 'hidden' : 'w-full'} controls autoPlay muted>
+                        <source src={item.video} type="video/mp4" />
+                      </video>
+                    </div>
+                  </div>
+                </div>
+              </SwiperSlide>
+            })}
+          </Swiper>
+          <div className="flex justify-between">
+            <div ref={navigationPrevRef} className='orangeOutlineBtn left-btn p-2 mb-10'><i className="fa-solid fa-arrow-left pr-2"></i>Prev</div>
+            <div ref={navigationNextRef} className='orangeOutlineBtn right-btn p-2 mb-10'>Next<i className="fa-solid fa-arrow-right pl-2"></i></div>
+          </div>
+          <Swiper
+            onSwiper={setThumbsSwiper}
+            loop={true}
+            spaceBetween={0}
+            slidesPerView={4}
+            freeMode={true}
+            watchSlidesProgress={true}
+            modules={[FreeMode, Navigation, Thumbs]}
+            className="mySwiper"
+          >
+            {projectDetail.map((item, index) => {
+              return <SwiperSlide key={index}>
+                <div className='h-20 overflow-hidden cursor-pointer' >
+                  <div>
+                    <div className="picture-wrapper m-auto max-h-36">
+                      <img className={item.img === '' ? 'hidden' : 'w-4/5'} src={item.img} alt={item.name} />
+                    </div>
+                    <div className="max-h-36">
+                      <video className={item.video === '' ? 'hidden' : 'w-full'}>
                         <source src={item.video} type="video/mp4" />
                       </video>
                     </div>

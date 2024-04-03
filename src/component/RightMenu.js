@@ -1,8 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import { headerTitle } from '../data/data'
 import { useLanguage } from './LanguageContext';
+import useScreenMode from './DarkMode';
 
 export default function RightMenu() {
+    const toggleScreenMode = useScreenMode();
+    const { toggleLanguageMode } = useLanguage();
     const { isVietnamese } = useLanguage();
     const [activeTitle, setActiveTitle] = useState(headerTitle[0].link);
     let sections = document.querySelectorAll('section');
@@ -79,7 +82,19 @@ export default function RightMenu() {
 
     return (
         <div className='menu'>
-            <div className='fixed right-5 top-1/3 flex flex-col z-2000'>
+            <div className='fixed right-5 flex flex-col justify-between z-2000 min-h-screen'>
+                <div className='flex mt-5'>
+                    <button className='language-mode-toggle flex-center relative max-h-16 mr-5'
+                        onClick={toggleLanguageMode}>
+                        <img className='english-mode' src='./img/flagvn.png' alt='VNflag' />
+                        <img className='vietnamese-mode' src='./img/flaguk.png' alt='UKflag' />
+                    </button >
+                    <button className='screen-mode-toggle flex-center w-12 rounded-full max-h-16'
+                        onClick={toggleScreenMode}>
+                        <img className='screen-light' src='./img/screensun.png' alt='sun' />
+                        <img className='screen-dark' src='./img/screenmoon.png' alt='moon' />
+                    </button >
+                </div>
                 <ul id='mainNav'>
                     {headerTitle.map((item, index) => {
                         const isActive = item.link === activeTitle;
@@ -90,7 +105,7 @@ export default function RightMenu() {
                         </li>
                     })}
                 </ul>
-                <div className='-rotate-90 mt-40'>
+                <div className='-rotate-90 mb-20'>
                     <a className='p-2 w-36 cursor-pointer hover:text-amber-300'
                         onClick={() => setActiveTitle(headerTitle[0].link)} >
                         {isVietnamese ? 'Về đầu trang' : 'Back to top'}

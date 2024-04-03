@@ -11,12 +11,13 @@ export default function ContactPg() {
         <div className="container">
           <div className="lg:grid lg:grid-cols-2">
             <div>
-              <h1 className='text-6xl lg:text-7xl text-amber-500 font-extrabold'> {isVietnamese ? 'Liên hệ làm việc ngay' : `Let's Work Together`}</h1>
-              <button className='orangeBtn mt-10' onClick={() => { }} >{isVietnamese ? 'GỬI EMAIL NGAY' : 'SEND ME AN EMAIL'}</button>
+              <h1 className='text-6xl lg:text-7xl text-amber-500 font-extrabold 
+              animate__animated animate__bounce animate__delay-3s animate__infinite animate__slower'> {isVietnamese ? 'Liên hệ làm việc ngay!' : `Let's Work Together!`}</h1>
+              <button className='orangeBtn mt-10 animate__animated animate__tada animate__delay-4s' onClick={() => { }} >{isVietnamese ? 'GỬI EMAIL NGAY' : 'SEND ME AN EMAIL'}</button>
             </div>
             <ul>
               {aboutDetail.map((item, index) => {
-                return <li key={index} className='animate__animated animate__slideInRight'>
+                return <li key={index} className={`animate__animated animate__fadeInRight` + ' animate__delay-' + index + 's'}>
                   <div className='min-w-8 orangeBtn flex-center'>
                     <i className={item.icon}></i>
                   </div>
