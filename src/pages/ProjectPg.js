@@ -1,7 +1,7 @@
 import React, { useRef, useState } from 'react'
 import { projectDetail } from '../data/data'
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { FreeMode, Navigation, Pagination, Thumbs } from 'swiper/modules';
+import { FreeMode, Navigation, Thumbs } from 'swiper/modules';
 import './ProjectPg.scss';
 import 'swiper/css';
 import 'swiper/css/pagination';

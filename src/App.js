@@ -7,8 +7,11 @@ import ContactPg from './pages/ContactPg';
 import ExperiencePg from './pages/ExperiencePg';
 import RightMenu from './component/RightMenu';
 import { LanguageProvider } from './component/LanguageContext';
+import useScrollEffect from './component/SectionScroll';
 
 function App() {
+  useScrollEffect();
+
   return (
     <div className="App">
       <LanguageProvider>
