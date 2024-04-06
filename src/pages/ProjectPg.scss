@@ -64,6 +64,27 @@
     }
 }
 
+.dark-mode .link-btn {
+    color: white;
+    background: transparent;
+    border: 2px solid $color-gray-2;
+}
+
+.dark-mode .tech-btn {
+    color: white;
+    background: $color-gray-2;
+}
+
+.tech-btn {
+    color: #000;
+    background: $color-yellow-1;
+}
+
+.link-btn {
+    color: black;
+    background: $color-yellow-2;
+}
+
 @keyframes moveGradient {
     50% {
         background-position: 100% 50%;

@@ -60,18 +60,18 @@ export default function ProjectPg() {
                       <p className='py-6 lg:py-3 xl:py-6 align-sub min-h-32 lg:min-h-40 2xl:min-h-56'>{isVietnamese ? item.vnintro : item.intro}</p>
                       <p className='flex gap-3'>
                         {item.techs.map((item, index) => <span key={index}
-                          className='tech-btn p-2 bg-slate-500 rounded-xl flex'>
+                          className='tech-btn p-2 rounded-xl flex'>
                           {item}</span>)}
                       </p>
-                      <p className="mt-5 flex">
-                        <button className={item.linkweb === '' ? 'hidden' : 'tech-btn w-48 py-2 px-4 border border-gray-400 rounded-2xl bg-black mr-5'}
+                      <p className="my-5 flex">
+                        <button className={item.linkweb === '' ? 'hidden' : 'link-btn w-48 py-2 px-4 rounded-2xl mr-5'}
                           onClick={() => { handleBtnClick(item.linkweb) }}>
                           <span>
                             <i className="fa-solid fa-link pr-3"></i>
                             {isVietnamese ? 'Xem website' : 'View Website'}
                           </span>
                         </button>
-                        <button className={item.linksource === '' ? 'hidden' : 'tech-btn w-48 py-2 px-4 border border-gray-400 rounded-2xl bg-black'}
+                        <button className={item.linksource === '' ? 'hidden' : 'link-btn w-48 py-2 px-4 rounded-2xl'}
                           onClick={() => { handleBtnClick(item.linksource) }}>
                           <span>
                             <i className="fa-brands fa-github pr-3"></i>
