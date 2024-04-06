@@ -36,12 +36,12 @@ export default function RightMenu() {
         <div id='menu'>
             <div className='z-2000 fixed right-0 md:right-5 flex flex-col justify-between min-h-screen'>
                 <div className='flex mt-5'>
-                    <button className=' language-mode-toggle flex-center relative max-h-16 mr-1 md:mr-5'
+                    <button className='language-mode-toggle flex-center relative max-h-16 mr-1 md:mr-5'
                         onClick={toggleLanguageMode}>
                         <img className='english-mode' src='./img/flagvn.png' alt='VNflag' />
                         <img className='vietnamese-mode' src='./img/flaguk.png' alt='UKflag' />
                     </button >
-                    <button className='screen-mode-toggle flex-center w-12 rounded-full max-h-16'
+                    <button className='screen-mode-toggle flex-center rounded-full max-h-16'
                         onClick={toggleScreenMode}>
                         <img className='screen-light' src='./img/screensun.png' alt='sun' />
                         <img className='screen-dark' src='./img/screenmoon.png' alt='moon' />

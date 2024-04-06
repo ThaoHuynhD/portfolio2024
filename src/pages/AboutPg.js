@@ -12,12 +12,12 @@ export default function AboutPg() {
     <section id='intro'>
       <div className="section-container">
         <div className="container">
-          <div className="grid xl:grid-cols-3 2xl:grid-cols-2 2xl:gap-5">
-            <div className="picture-wrapper w-4/5 2xl:w-auto m-auto rounded-xl">
+          <div className="grid xl:grid-cols-3 2xl:grid-cols-2">
+            <div className="picture-wrapper w-4/5 m-auto rounded-xl">
               <img className='banner-img' src='./img/banner.jpg' alt='' />
             </div>
             <div className=' xl:col-span-2 2xl:col-auto mx-5 lg:m-auto content '>
-              <h1 className='text-center lg:text-left text-5xl 2xl:text-7xl
+              <h1 className='text-center mt-10 lg:mt-0 lg:text-left text-5xl 2xl:text-7xl
               animate__animated animate__fadeInRightBig
               '>{isVietnamese ? 'Về' : 'About'}
                 <span className='text-5xl 2xl:text-7xl text-amber-500 font-bold animate__animated animate__fadeInRightBig'> {isVietnamese ? 'TÔI' : 'ME'}</span></h1>

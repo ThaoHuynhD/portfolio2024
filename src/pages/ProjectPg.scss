@@ -12,6 +12,10 @@
 
 .dark-mode .navBtn {
     background: $background-dark;
+
+    &:hover {
+        color: white;
+    }
 }
 
 .navBtn {
