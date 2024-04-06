@@ -48,10 +48,8 @@ function onScroll(activeTitle, dispatch, sections) {
 }
 
 function scrollToSection(sectionId) {
-
     const section = document.querySelector(sectionId);
     section.classList.add('active');
-    console.log("section: ", section);
 
     window.scrollTo({
         top: section.offsetTop,
@@ -67,15 +65,13 @@ const useScrollEffect = () => {
     const sections = document.querySelectorAll('section');
     const container = document.querySelector('#myBody');
 
-
     useEffect(() => {
-
         sections.forEach((section) => {
             section.classList.add('animate__animated');
             section.classList.remove('active');
         })
 
-        scrollToSection(activeTitle, sections);
+        scrollToSection(activeTitle);
         const handleScroll = debounce(onScroll(activeTitle, dispatch, sections), 200);
         container.addEventListener('wheel', handleScroll);
 
