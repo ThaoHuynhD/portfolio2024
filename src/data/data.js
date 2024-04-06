@@ -35,7 +35,7 @@ export const projectDetail = [
         vnintro: 'Để tạo ra một nền tảng giúp người dùng dễ dàng truy vấn đến các khách sạn phù hợp nhu cầu, chúng tôi đã xây dựng các logic hoạt động của trang web AirBnb giúp đặt phòng khách sạn theo nguyên tắc RESTful API. Tôi và đồng đội đã thiết lập logic của các hoạt động có thể xảy ra khi người dùng và quản trị viên cần truy xuất hay quản lý dữ liệu hiển thị trên trang web',
         img: './img/webairbnb.png',
         video: '',
-        techs: ['TypeScripts', 'Docker', 'NestJS', 'MySQL', 'Prisma', 'Swagger'],
+        techs: ['TypeScripts', 'NestJS', 'MySQL', 'Prisma', 'Swagger'],
         linkweb: '',
         linksource: 'https://github.com/vohaiphuc/cybersoft-be-airbnb.git',
     },

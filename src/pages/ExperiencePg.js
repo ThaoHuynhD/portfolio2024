@@ -19,7 +19,7 @@ export default function ExperiencePg() {
               <p className='lg:px-20 text-justify 2xl:text-xl'>With solid expertise in front-end website development, coupled with experience in backend development and integration, I excel not only in crafting engaging user interfaces but also in deploying and managing server-side API and database systems. I leverage a variety of professional software and tools.</p>
             </div>
           )}
-          <div className='lg:mx-20 grid grid-cols-4 gap-2 lg:grid-cols-6 2xl:grid-cols-8 2xl:gap-4'>
+          <div className='md:mx-20 grid grid-cols-4 gap-2 lg:grid-cols-6 2xl:grid-cols-8 2xl:gap-4'>
             {tools.map((item, index) => <div key={index} className='animate__animated animate__slideInUp'>
               <img className='w-24 lg:w-20 2xl:w-30 p-3 lg:p-0 text-white m-auto' src={item.link} alt='' />
               <p className='2xl:text-xl text-center'>{item.title}</p>

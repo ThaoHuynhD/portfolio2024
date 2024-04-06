@@ -23,7 +23,7 @@ export default function ProjectPg() {
           {isVietnamese ? (
             <div className="title">
               <h1 className='text-5xl 2xl:text-7xl animate-charcter'>Dự án của chúng tôi</h1>
-              <p className=' 2xl:text-xl'>Tôi và đồng đội đã xây dựng nhiều dự án khác nhau để phù hợp với các nhu cầu khác nhau của khách hàng. <br />Nếu bạn muốn xem thêm các ví dụ về công việc của tôi ngoài những dự án được giới thiệu trên trang web này, vui lòng liên hệ với tôi!</p>
+              <p className=' 2xl:text-xl'>Chúng tôi đã xây dựng nhiều dự án khác nhau để phù hợp với nhu cầu đa dạng của khách hàng. <br />Nếu bạn muốn xem thêm các ví dụ về công việc của tôi ngoài những dự án được giới thiệu trên trang web này, vui lòng liên hệ với tôi!</p>
               <button className='text-xl hover:text-amber-400 mt-2 animate-bounce hover:animate-none font-bold transition-all'
                 onClick={() => { handleBtnClick('https://github.com/ThaoHuynhD') }}
               >Xem Dự Án<i className="fa-solid fa-angles-right ml-1"></i></button>
@@ -54,16 +54,16 @@ export default function ProjectPg() {
             >
               {projectDetail.map((item, index) => {
                 return <SwiperSlide key={index}>
-                  <div className='grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-5 h-550 lg:h-400 2xl:mb-2' >
-                    <div className="2xl:col-span-2 item-content">
+                  <div className='grid grid-cols-1 lg:grid-cols-7 lg:gap-5 2xl:grid-cols-5 h-700 2xl:h-550 lg:h-350 2xl:mb-2' >
+                    <div className=" lg:col-span-4 2xl:col-span-2 item-content">
                       <h3 className='text-3xl 2xl:text-5xl text-amber-400 font-bold 2xl:py-3' key={index}>{item.name} </h3>
-                      <p className='py-6 align-sub min-h-32 lg:min-h-40 2xl:min-h-56'>{isVietnamese ? item.vnintro : item.intro}</p>
+                      <p className='py-6 lg:py-3 xl:py-6 align-sub min-h-32 lg:min-h-40 2xl:min-h-56'>{isVietnamese ? item.vnintro : item.intro}</p>
                       <p className='flex gap-3'>
                         {item.techs.map((item, index) => <span key={index}
                           className='tech-btn p-2 bg-slate-500 rounded-xl flex'>
                           {item}</span>)}
                       </p>
-                      <p className="mt-5">
+                      <p className="mt-5 flex">
                         <button className={item.linkweb === '' ? 'hidden' : 'tech-btn w-48 py-2 px-4 border border-gray-400 rounded-2xl bg-black mr-5'}
                           onClick={() => { handleBtnClick(item.linkweb) }}>
                           <span>
@@ -80,13 +80,13 @@ export default function ProjectPg() {
                         </button>
                       </p>
                     </div>
-                    <div className="2xl:col-span-3 lg:ml-10 my-10 lg:mt-0">
+                    <div className=" flex-center lg:col-span-3 2xl:col-span-3 md:mx-10 lg:mx-0 xl:mx-10 xl:my-0">
                       <div className={item.img === '' ? 'hidden' :
-                        'picture-wrapper flex m-auto max-h-max md:max-h-48 lg:max-h-max h-500 justify-start'}>
-                        <img className={item.img === '' ? 'hidden' : 'w-full md:w-4/5'} src={item.img} alt={item.name} />
+                        'picture-wrapper flex m-autojustify-start'}>
+                        <img className={item.img === '' ? 'hidden' : ''} src={item.img} alt={item.name} />
                       </div>
-                      <div className="video-wrapper flex-center m-auto max-h-max md:max-h-48 lg:max-h-max h-500">
-                        <video className={item.video === '' ? 'hidden' : 'w-full md:w-4/5'} controls autoPlay muted>
+                      <div className={item.video === '' ? 'hidden' : "video-wrapper flex-center m-auto"}>
+                        <video className={item.video === '' ? 'hidden' : ''} controls autoPlay muted>
                           <source src={item.video} type="video/mp4" />
                         </video>
                       </div>
@@ -97,10 +97,10 @@ export default function ProjectPg() {
             </Swiper>
           </div>
           <div className="flex justify-between mx-20">
-            <button ref={navigationPrevRef} className='navBtn p-2 lg:mb-4 xl:mt-4'><i className="fa-solid fa-arrow-left pr-2"></i>Prev</button>
-            <button ref={navigationNextRef} className='navBtn p-2 lg:mb-4 xl:mt-4'>Next<i className="fa-solid fa-arrow-right pl-2"></i></button>
+            <button ref={navigationPrevRef} className='navBtn p-2 my-4 lg:my-2 xl:my-4'><i className="fa-solid fa-arrow-left pr-2"></i>Prev</button>
+            <button ref={navigationNextRef} className='navBtn p-2 my-4 lg:my-2 xl:my-4'>Next<i className="fa-solid fa-arrow-right pl-2"></i></button>
           </div>
-          <div className="hidden lg:block lg:mx-10">
+          <div className="hidden xl:block lg:mx-10">
             <Swiper
               onSwiper={setThumbsSwiper}
               loop={true}
@@ -116,10 +116,10 @@ export default function ProjectPg() {
                   <div className='h-20 overflow-hidden cursor-pointer' >
                     <div>
                       <div className="picture-wrapper m-auto max-h-16 2xl:max-h-36">
-                        <img className={item.img === '' ? 'hidden' : 'w-4/5'} src={item.img} alt={item.name} />
+                        <img className={item.img === '' ? 'hidden' : ''} src={item.img} alt={item.name} />
                       </div>
                       <div className=" max-h-16 2xl:max-h-36">
-                        <video className={item.video === '' ? 'hidden' : 'w-full'}>
+                        <video className={item.video === '' ? 'hidden' : ''}>
                           <source src={item.video} type="video/mp4" />
                         </video>
                       </div>
