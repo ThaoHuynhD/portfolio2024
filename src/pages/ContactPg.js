@@ -5,17 +5,39 @@ import { useLanguage } from '../component/LanguageContext';
 
 export default function ContactPg() {
   const { isVietnamese } = useLanguage();
+
+  function redirectToGmail() {
+    var email = 'thaohuynh34.678@gmail.com';
+    var gmailURL = 'https://mail.google.com/mail/?view=cm&fs=1&to=' + encodeURIComponent(email);
+    window.open(gmailURL, '_blank')
+  }
+
+  function initiateCall() {
+    var phoneNumber = '0967100751';
+    var telURI = 'tel:' + phoneNumber;
+    window.open(telURI, '_blank')
+  }
+
+  const handleBtnClick = (index) => {
+    if (index === 1) {
+      initiateCall();
+    } else if (index === 2) {
+      redirectToGmail();
+    }
+  }
   return (
     <section id='contact'>
       <div className="section-container">
-        <div className="container">
-          <div className="lg:grid lg:grid-cols-2">
+        <div className="container p-0">
+          <div className="lg:grid lg:grid-cols-2 pl-10 sm:pl-0">
             <div>
-              <h1 className='text-6xl lg:text-7xl text-amber-500 font-extrabold 
+              <h1 className='text-7xl text-amber-500 font-extrabold 
               animate__animated animate__bounce animate__delay-3s animate__infinite animate__slower'> {isVietnamese ? 'Liên hệ làm việc ngay!' : `Let's Work Together!`}</h1>
-              <button className='orangeBtn mt-10 animate__animated animate__tada animate__delay-4s' onClick={() => { }} >{isVietnamese ? 'GỬI EMAIL NGAY' : 'SEND ME AN EMAIL'}</button>
+              <button className='orangeBtn mt-10 animate__animated animate__tada animate__delay-4s'
+                onClick={() => { redirectToGmail() }}
+              >{isVietnamese ? 'GỬI EMAIL NGAY' : 'SEND ME AN EMAIL'}</button>
             </div>
-            <ul>
+            <ul className='mt-10 lg:mt-auto'>
               {aboutDetail.map((item, index) => {
                 return <li key={index} className={`animate__animated animate__fadeInRight` + ' animate__delay-' + index + 's'}>
                   <div className='min-w-8 orangeBtn flex-center'>
@@ -23,7 +45,10 @@ export default function ContactPg() {
                   </div>
                   <div className="info">
                     <p>{isVietnamese ? item.vntitle : item.title}</p>
-                    <span className='lg:text-xl'>{isVietnamese ? item.vndata : item.data}</span>
+                    <span className='lg:text-xl'
+                      onClick={() => { handleBtnClick(index) }}
+
+                    >{isVietnamese ? item.vndata : item.data}</span>
                   </div>
                 </li>
               })}

@@ -6,7 +6,9 @@
     overflow: hidden;
     margin: 0;
     padding-top: 20px;
+    padding-right: 5px;
     display: inline-block;
+    max-width: fit-content;
     letter-spacing: 0.01em;
     transition: $transition-default;
     animation:
@@ -28,7 +30,7 @@
     }
 
     to {
-        width: 78%
+        width: 100%
     }
 }
 

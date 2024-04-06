@@ -10,21 +10,11 @@
     opacity: 1;
 }
 
-.left-btn {
-    position: relative;
-    left: -60px;
-}
-
-.right-btn {
-    position: relative;
-    right: -60px;
-}
-
-.dark-mode .orangeOutlineBtn {
+.dark-mode .navBtn {
     background: $background-dark;
 }
 
-.orangeOutlineBtn {
+.navBtn {
     --border-width: 3px;
 
     position: relative;

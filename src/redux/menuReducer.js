@@ -8,7 +8,6 @@ const initialState = {
 export default (state = initialState, { type, payload }) => {
     switch (type) {
         case SET_ACTIVE_TITLE:
-            // console.log("SET_ACTIVE_TITLE: ", payload);
             return {
                 ...state,
                 activeTitle: payload

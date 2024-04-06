@@ -31,6 +31,11 @@ body a.menu-item {
 }
 
 body.dark-mode a.menu-item {
+  color: gray;
+  letter-spacing: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   &:hover,
   &.active {
@@ -46,5 +51,52 @@ body.dark-mode a.menu-item {
 body #project {
   .tech-btn {
     color: white;
+  }
+}
+
+
+
+// @media screen and (max-width: 1024px) {}
+
+#totop {
+  padding: 10px;
+  font-weight: bolder;
+  cursor: pointer;
+  transition: $transition-default;
+  letter-spacing: 1px;
+  color: gray;
+
+  &:hover {
+    color: $color-yellow-4;
+    border-radius: 5%;
+    box-shadow: $box-shadow-2;
+  }
+
+  i {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 992px) {}
+
+@media screen and (max-width: 768px) {
+  #totop {
+    &:hover {
+      box-shadow: none;
+    }
+
+    i {
+      padding: 20px;
+      font-weight: bolder;
+      cursor: pointer;
+      transition: $transition-default;
+      display: block;
+
+      &:hover {
+        color: $color-yellow-4;
+        border-radius: 50%;
+        box-shadow: $box-shadow-2;
+      }
+    }
   }
 }
