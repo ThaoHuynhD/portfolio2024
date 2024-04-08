@@ -1,0 +1,113 @@
+@import '../variables.scss';
+
+a.menu-item {
+    display: flex;
+    padding: 0;
+    font-weight: bold;
+
+    &::after {
+        margin-left: auto;
+        content: '';
+        display: block;
+        background-color: $color-yellow-2;
+        width: 4px;
+        height: 50px;
+        transition: $transition-default;
+    }
+
+    &:hover,
+    &.active {
+        color: $color-orange-2;
+
+        &::after {
+            background-color: $color-yellow-5;
+            box-shadow: $box-shadow-3;
+        }
+    }
+}
+
+.dark-mode a.menu-item {
+    color: gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &::after {
+        background-color: $color-gray-2;
+    }
+
+    &:hover,
+    &.active {
+        color: $color-yellow-4;
+
+        &::after {
+            background-color: $color-yellow-4;
+            box-shadow: $box-shadow-2;
+        }
+    }
+}
+
+#totop {
+    padding: 10px;
+    font-weight: bolder;
+    cursor: pointer;
+    transition: $transition-default;
+    color: $color-gray-1;
+
+    p {
+        display: none;
+    }
+
+    i {
+        padding: 20px;
+        font-weight: bolder;
+        cursor: pointer;
+        transition: $transition-default;
+        display: block;
+        border-radius: 50%;
+        box-shadow: $box-shadow-3;
+
+        &:hover {
+            color: $color-orange-1;
+            background-color: $color-yellow-2;
+        }
+    }
+}
+
+.dark-mode #totop {
+    color: $color-gray-1;
+
+    i {
+        &:hover {
+            color: $color-yellow-4;
+            box-shadow: $box-shadow-2;
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    #totop {
+        &:hover {
+            color: $color-orange-1;
+            border-radius: 5%;
+            box-shadow: $box-shadow-3;
+        }
+
+        p {
+            display: inline-block;
+            padding-bottom: 3px;
+        }
+
+        i {
+            padding: 0;
+            padding-left: 5px;
+            border-radius: 0;
+            box-shadow: none;
+
+            &:hover {
+                box-shadow: none;
+            }
+        }
+    }
+
+}

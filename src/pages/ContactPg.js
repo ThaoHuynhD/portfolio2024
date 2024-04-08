@@ -1,6 +1,5 @@
 import React from 'react'
 import { aboutDetail } from '../data/data'
-import './Contact.scss'
 import { useLanguage } from '../component/LanguageContext';
 
 export default function ContactPg() {
@@ -29,7 +28,7 @@ export default function ContactPg() {
     <section id='contact'>
       <div className="section-container">
         <div className="container p-0">
-          <div className="lg:grid lg:grid-cols-2 pl-10 sm:pl-0">
+          <div className="lg:grid lg:grid-cols-2 lg:pl-10 sm:pl-0">
             <div className=' relative lg:-left-20 xl:left-0'>
               <h1 className='text-7xl text-amber-500 font-extrabold 
               animate__animated animate__bounce animate__delay-3s animate__infinite animate__slower'> {isVietnamese ? 'Liên hệ làm việc ngay!' : `Let's Work Together!`}</h1>

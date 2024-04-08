@@ -4,6 +4,7 @@ import { useLanguage } from './LanguageContext';
 import useScreenMode from './DarkMode';
 import { headerTitle } from '../data/data'
 import { SET_ACTIVE_TITLE } from '../constant/constant';
+import './RightMenu.scss'
 
 export default function RightMenu() {
 
@@ -34,9 +35,9 @@ export default function RightMenu() {
 
     return (
         <div id='menu'>
-            <div className='z-2000 fixed right-0 md:right-5 flex flex-col justify-between min-h-screen'>
-                <div className='flex mt-5'>
-                    <button className='language-mode-toggle flex-center relative max-h-16 mr-1 md:mr-5'
+            <div className='z-2000 fixed right-0 md:right-5 w-32 flex flex-col justify-between min-h-screen'>
+                <div className='flex justify-between mt-5'>
+                    <button className='language-mode-toggle flex-center relative max-h-16 left-5'
                         onClick={toggleLanguageMode}>
                         <img className='english-mode' src='./img/flagvn.png' alt='VNflag' />
                         <img className='vietnamese-mode' src='./img/flaguk.png' alt='UKflag' />
@@ -57,10 +58,10 @@ export default function RightMenu() {
                         </li>
                     })}
                 </ul>
-                <div className='-rotate-90 md:mb-20 mb-5 relative -right-10'>
+                <div className='-rotate-90 md:mb-20 mb-5 relative -right-10 -bottom-16 lg:-bottom-3'>
                     <a id='totop' className='cursor-pointer flex-center'
                         onClick={() => { handleBtnClick(headerTitle[0].link) }}>
-                        <span className='hidden md:block'>{isVietnamese ? 'Về đầu trang' : 'Back to top'}</span>
+                        <p className='hidden md:block'>{isVietnamese ? 'Về đầu trang' : 'Back to top'}</p>
                         <i className="fa-solid fa-angles-right"></i></a>
                 </div>
             </div>

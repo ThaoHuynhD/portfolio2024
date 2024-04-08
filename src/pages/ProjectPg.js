@@ -2,7 +2,6 @@ import React, { useRef, useState } from 'react'
 import { projectDetail } from '../data/data'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, FreeMode, Navigation, Thumbs } from 'swiper/modules';
-import './ProjectPg.scss';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
@@ -54,7 +53,7 @@ export default function ProjectPg() {
             >
               {projectDetail.map((item, index) => {
                 return <SwiperSlide key={index}>
-                  <div className='grid grid-cols-1 lg:grid-cols-7 lg:gap-5 2xl:grid-cols-5 h-700 2xl:h-500 lg:h-350 2xl:mb-2' >
+                  <div className='grid grid-cols-1 lg:grid-cols-7 lg:gap-5 2xl:grid-cols-5 h-700 2xl:h-470 lg:h-350 2xl:mb-2' >
                     <div className=" lg:col-span-4 2xl:col-span-2 item-content">
                       <h3 className='text-3xl 2xl:text-5xl text-amber-400 font-bold 2xl:py-3' key={index}>{item.name} </h3>
                       <p className='py-6 lg:py-3 xl:py-6 align-sub min-h-32 lg:min-h-40 2xl:min-h-56'>{isVietnamese ? item.vnintro : item.intro}</p>

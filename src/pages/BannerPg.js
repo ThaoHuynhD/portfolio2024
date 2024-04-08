@@ -1,5 +1,4 @@
 import React from 'react'
-import './Banner.scss'
 import { useLanguage } from '../component/LanguageContext';
 import { bannerImg, headerTitle } from '../data/data';
 import { useDispatch } from 'react-redux';
