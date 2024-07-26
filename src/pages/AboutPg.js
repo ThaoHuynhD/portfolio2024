@@ -6,7 +6,7 @@ export default function AboutPg() {
   const { isVietnamese } = useLanguage();
 
   const handleBtnClick = () => {
-    window.open('https://drive.google.com/drive/folders/1ufsfuYSSyZDld4C6rZ68uUOw3ghlIhAN?usp=sharing', '_blank')
+    window.open('https://drive.google.com/drive/folders/1-CJLAcX4-LfCHzUPDczUvKfwycxFvJJ-?usp=sharing', '_blank')
   }
   return (
     <section id='intro'>
