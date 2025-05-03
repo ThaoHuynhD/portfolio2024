@@ -16,7 +16,8 @@ export const aboutIntro = {
 export const aboutDetail = [
     { icon: 'fa-solid fa-location-dot', title: 'Address', vntitle: 'Địa chỉ', data: 'District 10, Ho Chi Minh City.', vndata: 'Quận 10, Thành phố Hồ Chí Minh.' },
     { icon: 'fa-solid fa-phone', title: 'Phone Number', vntitle: 'Số điện thoại', data: '(+84) 967 100 751', vndata: '0967 100 751' },
-    { icon: 'fa-solid fa-envelope', title: 'Email', vntitle: 'Địa chỉ email', data: 'thaohuynh34.678@gmail.com', vndata: 'thaohuynh34.678@gmail.com' }
+    { icon: 'fa-solid fa-envelope', title: 'Email', vntitle: 'Địa chỉ email', data: 'thaohuynh34.678@gmail.com', vndata: 'thaohuynh34.678@gmail.com' },
+    { icon: 'fa-solid fa-user', title: 'Status', vntitle: 'Tình trạng hôn nhân', data: 'Single', vndata: 'Độc thân' }
 ]
 export const projectDetail = [
     {
