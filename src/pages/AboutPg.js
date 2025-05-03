@@ -28,7 +28,7 @@ export default function AboutPg() {
                 return <div key={index} className="max-w-lg">
                   <ul className='mx-16 lg:mx-0 grid grid-cols-3 lg:grid-cols-2 gap-5 
                   animate__animated animate__fadeInRight animate__delay-1s'>
-                    <li><i className={item.icon}><i/>{isVietnamese ? item.vntitle : item.title}</li>
+                    <li><i className={item.icon}></i>{isVietnamese ? item.vntitle : item.title}</li>
                     <li className='col-span-2 lg:col-auto'>{isVietnamese ? item.vndata : item.data}</li>
                   </ul>
                 </div>
