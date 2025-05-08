@@ -37,7 +37,7 @@ export default function ContactPg() {
               >{isVietnamese ? 'GỬI EMAIL NGAY' : 'SEND ME AN EMAIL'}</button>
             </div>
             <ul className='mt-10 lg:mt-auto'>
-              {aboutDetail.map((item, index) => {
+              {aboutDetail.slice(0, -1).map((item, index) => {
                 return <li key={index} className={`animate__animated animate__fadeInRight` + ' animate__delay-' + index + 's'}>
                   <div className='min-w-10 orangeBtn flex-center'>
                     <i className={item.icon}></i>
